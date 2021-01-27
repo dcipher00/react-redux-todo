@@ -7,7 +7,8 @@ const TodoList = () => {
   const dispatch = useDispatch();
   const toggleTodo = (id,comp) => {
     dispatch(toggleTodoAction(id));
-    console.log(!comp);
+    if(comp==='false' || comp==='true')
+      console.log(!comp+" "+id);
   };
   const deleteTodo = (id) => dispatch(deleteTodoAction(id));
 
@@ -26,6 +27,7 @@ const TodoList = () => {
           <div key={todo.id} className="row mb-1">
             <div className="col-sm-2" style={{ paddingTop: "15px" }}>
               <input
+                style={{height:"30px",width:"30px"}}
                 type="checkbox"
                 checked={todo.complete}
                 onChange={toggleTodo.bind(null, todo.id, todo.complete)}
