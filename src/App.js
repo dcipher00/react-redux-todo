@@ -6,9 +6,13 @@ import "./App.css";
 
 function App() {
   return (
-      <div className="container">
+      <div className="container row mt-2">
+        <div className="col-sm-6">
         <ToDoInput />
+        </div>
+        <div className="col-sm-6">
         <ToDoList />
+        </div>
       </div>
   );
 }
