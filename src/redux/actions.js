@@ -12,3 +12,8 @@ export const deleteTodoAction = todoId => ({
   type: "DELETE_TODO",
   payload: todoId
 });
+
+export const addNestedTodoAction = todos => ({
+  type: "ADD_NESTED_TODO",
+  payload: todos
+});
